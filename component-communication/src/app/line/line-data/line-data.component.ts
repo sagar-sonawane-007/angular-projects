@@ -33,7 +33,6 @@ export class LineDataComponent implements OnInit {
       this.technologyInner = '';
     if (this.lineInner == undefined)
       this.lineInner = '';
-    console.log(this.plantInner);
   }
 
   sendLineData() {

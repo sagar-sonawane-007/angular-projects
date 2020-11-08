@@ -31,18 +31,15 @@ export class LineComponent implements OnInit {
 
   getLineName(lineName: string) {
     this.lineData.lineName = lineName;
-    console.log('after 1 : ' + JSON.stringify(this.lineData));
   }
 
   getLineData(lineDataFromEvent: LineModel) {
     this.lineData.plant = lineDataFromEvent.plant;
     this.lineData.technology = lineDataFromEvent.technology;
     this.lineData.line = lineDataFromEvent.line;
-    console.log('after 2 : ' + JSON.stringify(this.lineData));
   }
 
   getLineDesc(lineDesc: string) {
     this.lineData.description = lineDesc;
-    console.log('after 3 : ' + JSON.stringify(this.lineData));
   }
 } 
