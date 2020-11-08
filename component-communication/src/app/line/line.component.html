@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="jumbotron">
+        <h4 class="display-4">Communaication</h4>
+    </div>
+    <div class="card">
+        <div class="card-header">Line Data - {{lineData | json}}</div>
+        <div class="card">
+            <div class="card-body">
+                <app-line-name [lineNameInner]="lineData.lineName" (pushDataEvent)="getLineName($event)"></app-line-name>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <app-line-data [plantInner]="lineData.plant" [technologyInner]="lineData.technology"
+                    [lineInner]="lineData.line" (pushDataEvent)="getLineData($event)"></app-line-data>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <app-line-desc [lineDescInner]="lineData.description" (pushDataEvent)="getLineDesc($event)"></app-line-desc>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <button class="btn btn-primary" (click)="sendMessage();">Success</button>
+            </div>
+        </div>
+    </div>
+</div>

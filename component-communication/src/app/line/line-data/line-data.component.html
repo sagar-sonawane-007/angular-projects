@@ -1,0 +1,12 @@
+<label for="plantInner">Plant</label>
+<select name="plantInner" [(ngModel)]="plantInner" class="form-control">
+    <option></option>
+    <option *ngFor="let plant of plants" [ngValue]="plant">{{plant}}</option>
+</select>
+<br>
+<label for="technologyInner">Technology</label>
+<input type="text" name="technologyInner" [(ngModel)]="technologyInner" class="form-control" />
+<br>
+<label for="lineInner">Line</label>
+<input type="text" name="lineInner" [(ngModel)]="lineInner" class="form-control" />
+<br>
