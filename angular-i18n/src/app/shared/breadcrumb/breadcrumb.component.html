@@ -1,1 +1,11 @@
-<p>breadcrumb works!</p>
+<div class="breadcrumb simple">
+    <div *ngFor="let bcElement of bcLoadedData; let last = last">
+        <a [routerLink]="bcElement.route">
+            <span *ngIf="bcElement.name == 'home'" i18n>home</span>
+            <span *ngIf="bcElement.name == 'line'" i18n>line</span>
+            <span *ngIf="bcElement.name == 'createDraft'" i18n>createDraft</span>
+            <span *ngIf="bcElement.name == 'editDraft'" i18n>editDraft</span>
+        </a>
+        <span class="breadcrumb-separator" *ngIf="!last">></span>
+    </div>
+</div>
