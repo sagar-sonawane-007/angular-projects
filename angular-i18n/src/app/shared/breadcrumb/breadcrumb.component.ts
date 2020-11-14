@@ -1,5 +1,4 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, ElementRef, Inject, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Router, Event, ActivationEnd, NavigationEnd, } from "@angular/router";
 import { filter, map, buffer, pluck } from "rxjs/operators";
 import { Breadcrumb } from './breadcrumb';
@@ -19,7 +18,8 @@ export class BreadcrumbComponent implements OnInit {
   bcLoadedData: Breadcrumb[];
   bcForDisplay;
 
-  constructor(private router: Router, @Inject(DOCUMENT) document) {
+  constructor(private router: Router) {
+    // #link https://stackoverflow.com/questions/45785247/angular-2-dynamic-breadcrumbs
     // navigationEnd$ is trigered once per completed routing event, in other words
     // once per loading a component that is in the end of the current route
     const navigationEnd$ = this.router.events.pipe(filter(isNavigationEnd));
