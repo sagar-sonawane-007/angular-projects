@@ -49,6 +49,11 @@ export class BreadcrumbComponent implements OnInit {
       )
       .subscribe(routeData => {
         this.bcLoadedData = routeData;
+        const totalRoutes = this.bcLoadedData.length;
+        if (totalRoutes > 0) {
+          // speacially to work with :params
+          this.bcLoadedData[totalRoutes - 1].route = this.router.url;
+        }
       });
   }
 
