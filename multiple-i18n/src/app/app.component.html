@@ -1,2 +1,7 @@
-<router-outlet></router-outlet>
-<h1 i18n>hello</h1>
+<div *ngIf="isMe; else elseBlock">
+    <h1 i18n>hello</h1>
+    <h2>I am APP <a href="home">Home</a></h2>
+</div>
+<ng-template #elseBlock>
+    <router-outlet></router-outlet>
+</ng-template>
