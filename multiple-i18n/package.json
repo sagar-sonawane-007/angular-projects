@@ -7,9 +7,9 @@
     "start-de": "ng serve --configuration=de",
     "start-en": "ng serve --configuration=en",
     "build": "ng build --localize",
-    "prod" : "ng build --prod --localize",
-    "prod-build" : "ng build --output-path=target/dist --prod --localize",
-    "translate" : "ng xi18n --output-path=src/locale",
+    "prod": "ng build --prod --localize",
+    "prod-build": "ng build --output-path=target/dist --prod --localize",
+    "translate": "ng xi18n --output-path=src/locale",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
