@@ -19,10 +19,9 @@ export class AppComponent {
       .subscribe((event: NavigationEnd) => {
         console.log('prev:', event.url);
         this.isMe = AppComponent.myUrl === event.url;
+        console.log('this.isMe: ', this.isMe);
       });
-    console.log('URL: ', this.router.url);
-    this.isMe = AppComponent.myUrl === this.router.url;
-    console.log('this.isMe: ', this.isMe);
+    // console.log('URL: ', this.router.url);
     console.log('configured routes: ', this.router.config);
   }
 }
