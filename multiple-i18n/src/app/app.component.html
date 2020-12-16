@@ -1,6 +1,6 @@
 <div *ngIf="isMe; else elseBlock">
     <h1 i18n>hello</h1>
-    <h2>I am APP <a href="home">Home</a></h2>
+    <h2><span i18n>I am</span> APP <a href="home" i18n>Home</a></h2>
 </div>
 <ng-template #elseBlock>
     <router-outlet></router-outlet>
